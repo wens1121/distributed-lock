@@ -2,7 +2,7 @@
 
 ## 一、简介
 
-​			**Distributed-Lock **为解决分布式系统中资源争夺而生。在当前分布式、微服务架构盛行的年代，多个服务可能会对第一个资源进行抢夺，如果不加以控制，可能导致无法想象有点后果，或者有一些操作不可以同时多次操作。
+​			** Distributed-Lock **为解决分布式系统中资源争夺而生。在当前分布式、微服务架构盛行的年代，多个服务可能会对第一个资源进行抢夺，如果不加以控制，可能导致无法想象有点后果，或者有一些操作不可以同时多次操作。
 
 
 
@@ -46,8 +46,8 @@ github地址：https://github.com/wenshao1121567443/distributed-lock
 
 ```yml
 spring:
-	dispers-lock:
-		storage: redis/zookeeper/mysql
+    dispers-lock:
+        storage: redis/zookeeper/mysql
 ```
 
 默认是可以不做配置的，三种方式是有优先级的，并且会根据依赖环境进行自动装配。
