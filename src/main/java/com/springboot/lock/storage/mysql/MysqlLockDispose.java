@@ -58,7 +58,6 @@ public class MysqlLockDispose extends AbstractLockDisposeFactory {
      * @Description  说明：初始化数据库
      * @Date 2020/9/8 5:37 下午
      * @Param  * @param
-     * @return void
      **/
     @Override
     public void init() {

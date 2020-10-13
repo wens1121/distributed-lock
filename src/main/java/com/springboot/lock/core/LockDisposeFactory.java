@@ -17,7 +17,6 @@ public interface LockDisposeFactory {
      * @Description  说明：初始化
      * @Date 2020/9/8 5:36 下午
      * @Param  * @param
-     * @return void
      **/
     default public void init(){
 
@@ -48,7 +47,6 @@ public interface LockDisposeFactory {
      * @Description  说明：结束调用
      * @Date 2020/9/10 6:28 下午
      * @Param  * @param
-     * @return void
      **/
     default public void destroy(){
 

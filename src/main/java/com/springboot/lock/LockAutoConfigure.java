@@ -36,7 +36,6 @@ import java.util.stream.Collectors;
 @Configuration
 @EnableConfigurationProperties(LockConfig.class)
 @ComponentScan
-//@Import(DistributedLockAspect.class)
 public class LockAutoConfigure implements ApplicationContextAware{
 
     private ApplicationContext applicationContext;

@@ -108,7 +108,6 @@ public class LockMysqlDmlDao {
      * @Description  说明：查询过期数据
      * @Date 2020/9/9 10:32 上午
      * @Param  * @param connection
-     * @return java.util.List<com.springboot.lock.storage.mysql.model.DistributLock>
      **/
     public List<DistributLock> selectExpirationTimeList(Connection connection ){
 
@@ -147,7 +146,6 @@ public class LockMysqlDmlDao {
      * @Description  说明：查询过期数据
      * @Date 2020/9/9 10:32 上午
      * @Param  * @param connection
-     * @return java.util.List<com.springboot.lock.storage.mysql.model.DistributLock>
      **/
     public Integer delExpirationTime(Connection connection ){
 

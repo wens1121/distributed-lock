@@ -27,7 +27,6 @@ public class ZookeeperLockDispose extends AbstractLockDisposeFactory {
 
 
     /**
-     * @return void
      * @Author 温少
      * @Description 说明：初始化
      * @Date 2020/9/8 5:36 下午
@@ -86,7 +85,6 @@ public class ZookeeperLockDispose extends AbstractLockDisposeFactory {
     }
 
     /**
-     * @return void
      * @Author 温少
      * @Description 说明：结束调用
      * @Date 2020/9/10 6:28 下午

@@ -522,8 +522,7 @@ public class DateUtils {
      * 根据一个日期，获取当前月的开始与结束日期
      *
      * @param date
-     * @param type : 参数类型：1-->开始日期；其余数字-->结束日期
-     * @return
+     * @param type : 参数类型：1-开始日期；其余数字-结束日期
      */
     public static Date getTheStartOrEndDayByOneDate(Date date, int type) {
         Calendar cal = Calendar.getInstance();

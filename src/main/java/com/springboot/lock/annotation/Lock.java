@@ -12,7 +12,7 @@ public @interface Lock {
     /** 锁的key */
     String key() ;
 
-    /** 锁的请求ID */
+    /** 锁的请求ID 值为-1，则使用UUID*/
     String id() default "'0'";
 
     /** 超时时间 */

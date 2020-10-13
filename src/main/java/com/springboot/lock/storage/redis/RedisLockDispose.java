@@ -42,7 +42,6 @@ public class RedisLockDispose extends AbstractLockDisposeFactory {
 
 
     /**
-     * @return void
      * @Author 温少
      * @Description 说明：初始化
      * @Date 2020/9/8 5:36 下午
@@ -89,7 +88,10 @@ public class RedisLockDispose extends AbstractLockDisposeFactory {
     @Override
     public Boolean create(String lockKey, String requestId, Long timeout, TimeUnit timeUnit) {
         try {
-            return redisTemplate.opsForValue().setIfAbsent(lockKey,requestId,timeout,timeUnit);
+            if(redisTemplate.opsForValue().setIfAbsent(lockKey,requestId)){
+                redisTemplate.expire(lockKey,timeout,timeUnit);
+                return true;
+            }
         }catch (Exception e){
             log.error("lock create error ",e);
         }

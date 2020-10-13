@@ -4,6 +4,7 @@ import com.springboot.lock.annotation.Lock;
 import com.springboot.lock.entity.LockEntity;
 import com.springboot.lock.enums.LockTypeEnum;
 import com.springboot.lock.exceptions.DistributedLockException;
+import com.springboot.lock.utils.RandomUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -55,7 +56,12 @@ public class DistributedLockAspect {
         // 获取AspectAnnotation注解
         Lock lock = method.getAnnotation(Lock.class);
         String key = this.getValue(context,lock.key());
-        String id = this.getValue(context,lock.id());
+        String id=null;
+        if(lock.id().equals("-1")){
+            id = RandomUtils.getUUID();
+        }else {
+            id = this.getValue(context,lock.id());
+        }
         log.debug("{}方法加锁：{},{}",methodName,key,id);
         LockEntity lockEntity = LockEntity.builder()
                 .lockKey(key)
